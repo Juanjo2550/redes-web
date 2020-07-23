@@ -2,8 +2,8 @@ const express = require("express");
 const chalk = require("chalk");
 const app = express();
 
-app.on("/", express.static("./public/"));
+app.use(express.static("./public/"));
 
-app.listen(() => {
+app.listen(80, () => {
   console.log(chalk.bgGreen("Servidor creado en el puerto 80"));
-}, 80);
+});
